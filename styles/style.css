@@ -1,0 +1,370 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+* {
+  padding: 0%;
+  margin: 0%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.home nav {
+  background-color: #e0ece4;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 4;
+}
+
+.home a {
+  color: #766161;
+}
+
+.bg-img {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.4))), url("../images/home-img.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url("../images/home-img.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.bg-text {
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.bg-text .title {
+  margin: 3%;
+  color: white;
+  font-family: "Barlow", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.bg-text .sub-title {
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+  color: white;
+}
+
+#about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#about p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+}
+
+#about .service-box {
+  margin-top: 4%;
+}
+
+#about .card {
+  position: relative;
+}
+
+#about .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  cursor: pointer;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.6)));
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6));
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#about .card:hover .overlay {
+  opacity: 2;
+}
+
+#about .service-desc {
+  width: 80%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  opacity: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#about .service-desc p {
+  cursor: pointer;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+#about .card:hover .service-desc {
+  opacity: 1;
+  top: 10%;
+}
+
+.linkTitle {
+  font-family: "Barlow", sans-serif;
+  color: #766161;
+  border-bottom: 2px solid #766161;
+}
+
+#work {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin-top: 3%;
+  background-color: #e1e5ea;
+}
+
+#work .carousel {
+  margin-bottom: 3%;
+}
+
+#work .carousel .carousel-item {
+  width: 450px;
+  margin-top: -4%;
+}
+
+#team {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin-top: 3%;
+}
+
+#team .card {
+  position: relative;
+}
+
+#team img {
+  height: 200px;
+  width: 100%;
+}
+
+#team .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.6)));
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6));
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#team .card-image:hover .overlay {
+  opacity: 1;
+}
+
+#team .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#team .social-icons i {
+  cursor: pointer;
+  color: white;
+  padding: 0 7%;
+}
+
+#team .card-image:hover .social-icons {
+  opacity: 1;
+}
+
+#testimonials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin-top: 3%;
+}
+
+#testimonials .clients {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 6%;
+}
+
+#testimonials .clients img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+#testimonials .clients .client-review {
+  text-align: left;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 6%;
+}
+
+#testimonials .clients .client-review p {
+  color: #766161;
+  font-size: 1.2rem;
+  margin-top: 2%;
+}
+
+#testimonials .clients .card {
+  padding: 7%;
+  height: auto;
+  width: auto;
+  position: relative;
+  margin-top: -10%;
+  z-index: -1;
+  border-left: 4px solid #766161;
+}
+
+#contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin-top: 3%;
+  padding: 3%;
+  background-color: #d9ecf2;
+}
+
+#contact .heading {
+  font-size: 2.2rem;
+  color: #2BBBAD;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+}
+
+#contact .blockquote {
+  margin: 4% 0;
+}
+
+#contact .mail {
+  margin-top: 3%;
+}
+
+.page-footer {
+  background-color: #a7bbc7;
+}
+
+@media only screen and (max-width: 600px) {
+  #team img {
+    height: 260px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

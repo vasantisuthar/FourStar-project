@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+$titleFont: 'Barlow', sans-serif;
+$textFont:'Poppins', sans-serif;
+$navbar:#e0ece4;
+$fontColor:#766161;
+$white:white;
+
+*{
+    padding:0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+@mixin flexBox($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+html{
+    scroll-behavior: smooth;
+}
+.home{
+    @include flexBox(column);
+    height:100vh;
+    nav{
+        background-color:$navbar;
+        position: fixed;
+        top:0;
+        width:100%;
+        z-index: 4;
+    }
+    a{
+        color:$fontColor;
+    }
+}
+.bg-img{
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)) ,url("../images/home-img.jpg");
+    background-size: cover;
+    height:100%;
+    width:100%;
+}
+.bg-text{
+    color: $white;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    .title{
+        margin:3%;
+        color:$white;
+        font-family: $titleFont;
+        font-size: 3.5rem;
+        font-weight:700;
+    }
+    .sub-title{
+        font-family:$textFont;
+        font-size: 2rem;
+        color:$white;
+    }
+}
+#about{
+    @include flexBox(column);
+   
+   p{
+        font-family: $textFont;
+        font-size: 1.2rem;
+    }
+    .service-box{
+        margin-top:4%;
+    }
+    .card{
+        position:relative;
+    }
+    .overlay{
+        position: absolute;
+        height: 100%;
+        width:100%;
+        top:0;
+        cursor: pointer;
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.6));
+        opacity: 0;
+        transition: 1s;
+    }
+    .card:hover{
+        .overlay{
+            opacity: 2;
+        }
+    }
+    .service-desc{
+        width:80%;
+        position:absolute;
+        left:50%;
+        top:0;
+        opacity: 0;
+        transform:translateX(-50%);
+        transition: 1s;
+        p{
+            cursor: pointer;
+            color:$white;
+            font-size: 1.3rem;
+            font-weight: 800;
+        }
+    }
+    .card:hover .service-desc{
+        opacity: 1;
+        top:10%;
+    }
+}
+.linkTitle{
+        font-family: $titleFont;
+        color:#766161;  
+        border-bottom: 2px solid $fontColor;
+}
+
+#work{
+    @include flexBox(column);
+    text-align: center;
+    margin-top:3%;
+    background-color: #e1e5ea;
+    .carousel
+    {   
+        margin-bottom: 3%;
+        .carousel-item{
+            width:450px;
+            margin-top:-4%;
+        }
+    }
+}
+
+#team{
+    @include flexBox(column);
+    text-align: center;
+    margin-top:3%;
+    .card{
+        position: relative;
+    }
+    img{
+        height:200px;
+        width:100%;
+    }
+    .overlay{
+        position: absolute;
+        height:100%;
+        width:100%;
+        top:0;
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.6));
+        opacity:0;
+        transition: 1s;
+    }
+    .card-image:hover .overlay{
+        opacity: 1;
+    }
+    .social-icons{
+        @include flexBox(row);
+        position: absolute;
+        left:50%;
+        top:50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition:1s;
+        i{
+            cursor: pointer;
+            color:$white;
+            padding: 0 7%;
+        }
+    }
+    .card-image:hover .social-icons{
+        opacity: 1;
+    }
+}
+
+#testimonials{
+    @include flexBox(column);
+    text-align: center;
+    margin-top:3%;
+    .clients{
+        @include flexBox(column);
+        margin-top:6%;
+        img{
+            height:100px;
+            width:100px;
+            border-radius: 50%;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);        
+        }
+        .client-review{
+            text-align: left;
+            font-family: $textFont;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-top: 6%;
+            p{
+                color:$fontColor;
+                font-size: 1.2rem;
+                margin-top:2%;
+            }
+        }
+        .card{
+        padding:7%;
+        height: auto;
+        width:auto;
+        position: relative;
+        margin-top:-10%;
+        z-index: -1;
+        border-left:4px solid $fontColor;
+        }
+    }
+}
+
+#contact{
+    @include flexBox(column);
+    text-align: center;
+    margin-top:3%;
+    padding:3%;
+    background-color: #d9ecf2;
+    .heading{
+        font-size: 2.2rem;
+        color:#2BBBAD;
+        font-family: $textFont;
+        font-weight: 800;
+    }
+    .blockquote{
+        margin:4% 0;
+    }
+  
+    .mail{
+        margin-top:3%;
+    }
+    
+}
+.page-footer{
+    background-color: #a7bbc7;
+}
+@media only screen and(max-width:600px) {
+    #team{
+        img{
+            height: 260px;
+        }
+    }
+}
